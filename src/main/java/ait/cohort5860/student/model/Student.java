@@ -10,13 +10,13 @@ import java.util.Map;
 @Getter
 @EqualsAndHashCode(of = "id")
 public class Student {
+
     private Long id;
     @Setter
     private String name;
     @Setter
    private String password;
    private Map<String,Integer> scores = new HashMap<>();
-
 
     public Student(Long id, String name, String password) {
         this.id = id;

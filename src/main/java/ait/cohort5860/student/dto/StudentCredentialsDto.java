@@ -15,4 +15,6 @@ public class StudentCredentialsDto {
     private String name;
     private String password;
 
+    public StudentCredentialsDto(Long id, String name, String password) {
+    }
 }
