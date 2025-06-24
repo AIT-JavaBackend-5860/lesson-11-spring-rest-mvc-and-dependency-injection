@@ -11,7 +11,7 @@ import java.util.Map;
 @EqualsAndHashCode(of = "id")
 public class Student {
 
-    private Long id;
+    private long id;
     @Setter
     private String name;
     @Setter

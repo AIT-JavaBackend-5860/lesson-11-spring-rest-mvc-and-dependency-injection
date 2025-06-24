@@ -10,31 +10,21 @@ import java.util.Set;
 
 public interface StudentService {
 
-    // Add new student (POST /student)
-    Boolean addStudent(StudentCredentialsDto studentCredentialsDtoDtoDto);
+    Boolean addStudent(StudentCredentialsDto studentCredentialsDto);
 
-    // Get student by ID (GET /student/{id})
     StudentDto findStudent(Long id);
 
-    // Delete student by ID (DELETE /student/{id})
     StudentDto removeStudent(Long id);
 
-    // Update student data (PATCH /student/{id})
     StudentCredentialsDto updateStudent(Long id, StudentUpdateDto studentUpdateDto);
 
-    // Add score for student (PATCH /score/student/{id})
-    Boolean addScore(Long id, ScoreDto scoreDtoDto);
+    Boolean addScore(Long id, ScoreDto scoreDto);
 
-    // Find all students by name (GET /students/name/{name})
-    List<StudentDto> findAllStudents(String name);
+    List<StudentDto> findStudentsByName(String name);
 
-    // Count students by names (GET /quantity/students?names=...)
     Long countStudentsByNames(Set<String> names);
 
-    // Find students by exam + min score (GET /students/exam/{exam}/minscore/{minScore})
-    List<StudentDto> findAllStudentsByExamNameMinScore(String examName, Integer minScore);
-
-
+    List<StudentDto> findStudentsByExamNameMinScore(String examName, Integer minScore);
 
 
 }
